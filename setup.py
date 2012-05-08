@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 
 setup(
     name='apush',
-    version='0.0.1',
+    version='0.1.0',
     description='A simple Apple push notification service provider',
     long_description=readme,
     author='Barum Rho',
