@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.md') as f:
     readme = f.read()
@@ -18,6 +18,6 @@ setup(
     url='https://github.com/barumrho/apush',
     license=license,
     keywords='apple push notification',
-    py_modules=['apush']
+    packages=find_packages()
 )
 
