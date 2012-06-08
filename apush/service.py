@@ -154,7 +154,7 @@ class Service(object):
                 break
 
             fb = struct.unpack("!IH32s", fb)
-            feedbacks.append(fb[0], fb[2])
+            feedbacks.append((fb[0], fb[2]))
 
         self.disconnect()
         return feedbacks
