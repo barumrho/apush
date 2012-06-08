@@ -117,8 +117,14 @@ class Service(object):
         '''
         sent = 0
         while sent < len(self._queue):
-            for m in self._queue[sent:]:
-                self.gateway.send(str(m))
+            try:
+                for m in self._queue[sent:]:
+                    self.gateway.send(str(m))
+            except:
+                # May throw an exception if the connection is closed
+                # We should have a error to recv, so simply continue as
+                # usual
+                pass
 
             self.gateway.settimeout(5)
             try:
