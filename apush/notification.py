@@ -34,7 +34,7 @@ class Notification(object):
         if self.alert:
             aps['alert'] = self.alert
 
-        if self.badge:
+        if self.badge is not None:
             aps['badge'] = self.badge
 
         if self.sound:
