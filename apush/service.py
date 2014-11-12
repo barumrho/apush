@@ -63,7 +63,7 @@ class Service(object):
     def _connect(self, addr):
         s = socket(AF_INET, SOCK_STREAM)
         s = ssl.wrap_socket(s, certfile=self.certfile,
-                            ssl_version=ssl.PROTOCOL_SSLv3)
+                            ssl_version=ssl.PROTOCOL_TLSv1)
         s.connect(addr)
         return s
 
